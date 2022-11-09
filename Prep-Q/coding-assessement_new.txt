@@ -1,0 +1,24 @@
+The bonus challenge NOT required!
+
+1.1.	Write an API endpoint that accepts a GitHub ID and returns Follower GitHub ID’s (up to 5 Followers total) associated with the passed in GitHub ID.  
+	
+2. Write an API endpoint that accepts a GitHub ID and retrieves the Repository names (up to 3 Repositories total) associated with the passed in GitHub ID, along with the Stargazer GitHub ID’s (up to 3 Stargazers total) associated with each Repository.  Retrieve data up to 3 levels deep, repeating the process of retrieving the associated Repositories (up to 3 Repositories total) for each Stargazer (up to 3 Stargazers total) found.  Data should be returned in JSON format.
+3.	See requirements 2, 3, and 4 above.
+
+Tips:
+
+1.	You’ll need a GitHub account (which are free) to complete this coding challenge.
+2.	GitHub provides API’s for retrieving Followers, Repositories, and Stargazers.  Please see the following GitHub API documentation:
+a.	https://developer.github.com/v3/users/followers/ 
+b.	https://developer.github.com/v3/repos/
+c.	https://developer.github.com/v3/activity/starring/
+
+
+
+
+
+public   void  m1(int gid){
+		
+	
+
+}

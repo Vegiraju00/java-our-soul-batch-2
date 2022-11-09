@@ -1,0 +1,130 @@
+1 - why we should override equals and hashcode method
+https://www.geeksforgeeks.org/override-equalsobject-hashcode-method/
+
+2-  singletone
+https://www.geeksforgeeks.org/prevent-singleton-pattern-reflection-serialization-cloning/
+
+3 - Covariant return types in Java
+https://www.geeksforgeeks.org/covariant-return-types-java/
+
+4 - overload main method? 
+https://www.geeksforgeeks.org/gfact-48-overloading-main-in-java/
+
+
+5 - why main method have arguments
+https://www.geeksforgeeks.org/understanding-public-static-void-mainstring-args-in-java/
+
+passing arguments
+https://www.geeksforgeeks.org/parameter-passing-techniques-in-java-with-examples/
+
+6 - 
+class Test
+{
+	public static void main(String a[])
+	{
+		Two.main(a);		
+	}
+}
+
+class Two 
+{
+	public static void main(String a[])
+	{
+		System.out.println(a[0]);	
+	}
+}
+
+
+Could not find or load main class
+
+
+A.class
+A a1=A.getInstance();
+
+7 - can we declare 2 public class in one file
+https://dzone.com/articles/why-single-java-source-file-can-not-have-more-than
+
+
+
+8 - What is the difference between Final, Finalize and Finally? 
+
+Final: is a key word is used with variable , class and method to apply restrictions , it prevent variable to be Reasigned and prevent class to be inhirted and prevent method to be overrided
+Finally: it's block of code used to excute important code wether exception handeled or not
+Fainalize: it's a method used to performe clean up processing just before object is  garbage collected
+
+9 - what is the problem
+
+class Test
+{
+private Test(){}
+	
+}
+class Two  extends Test
+{
+	
+	public static void main(String a[])
+	{
+		new Two();	
+	}
+}
+
+
+
+
+Implicit super constructor Test() is not visible for default constructor. 
+Must define an explicit constructor
+
+
+
+10 - q37 image answer B
+
+
+
+
+11 - what's the difference between  equals method and hashcode method?
+Equals: Determines if the objects are exactly equalvalent 
+// hashcode gets the memory location of the variable in stack.
+  // == is the default for .equals and it compares the hash code of the two variables
+hashcode value can be changed in multiple execution in the same application but equal method don't , 
+when two object are equal in equal method that’s mean their hashcode must be same
+
+
+
+	static String s="cogent";
+	static String s1="cogent";
+	static String s2=new String("cogent"); 
+	static String s3=new String("cogent"); 
+
+	System.out.println(s==s1);				true
+	System.out.println(s.equals(s1));			true
+	System.out.println(s==s2);				false
+	System.out.println(s.equals(s2));			true
+	System.out.println(s2==s3);				false
+	System.out.println(s2.equals(s3));			true
+	System.out.println(s2.hashCode()==s3.hashCode());	true 
+	cause hashCode had been overriden
+
+
+
+12-What is the difference  between Error and Exception? Checked vs Unchecked?
+
+Error- Java comiles errors 
+ Exception- runtime errors that occurs when code executes.  
+can prevent crashes with try and catch block
+
+errors are unchecked type it's indicate there is some serious problem and shouldn't be catsh
+Exception unchecked error - runtime it's indicate that we have some issue with the code that our code try to do something 
+it cann't do like ArrayIndexOutOfBound we can call it programmer error we can avoid it by write better code
+checked Exception -Compile time it's happining during runtime we can use try and catsh like FileNotFoundException.
+
+
+
+13 -is finally always executable
+yes, unless the System forced shutdown in try block
+system.exit();
+
+
+
+
+
+
