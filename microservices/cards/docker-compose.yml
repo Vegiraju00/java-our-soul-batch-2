@@ -1,0 +1,30 @@
+version: "3.8"
+
+services:
+
+  accounts:
+    image: demo/accounts:latest
+    mem_limit: 700m
+    ports:
+      - "9001:8081"
+    networks:
+      - sample-bank
+    
+  loans:
+    image: nitin/loans:latest
+    mem_limit: 700m
+    ports:
+      - "9002:8082"
+    networks:
+      - sample-bank
+    
+  cards:
+    image: demo/cards:latest
+    mem_limit: 700m
+    ports:
+      - "9003:8082"
+    networks:
+      - sample-bank
+    
+networks:
+  sample-bank:
